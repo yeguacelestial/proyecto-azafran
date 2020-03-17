@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from proyectoAzafran.views import main_azafran
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('proyectoAzafran/', main_azafran),
 ]
