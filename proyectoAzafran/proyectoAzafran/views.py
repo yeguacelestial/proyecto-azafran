@@ -6,4 +6,4 @@ def home(request):
     return render(request, 'base.html')
 
 def azafran(request):
-    return HttpResponse("Bienvenid@ a Proyecto Azafran")
+    return HttpResponse("view azafran")
