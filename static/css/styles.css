@@ -1,13 +1,10 @@
-@import "https://fonts.googleapis.com/css?family=Lato:100";
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif; */
-    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
 .banner-text {
@@ -33,48 +30,36 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 40%);
 }
 
 .container span{
     display: block;
-    top: 2rem;
 }
 
 .container span.text1{
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 3px solid #fff;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    /* padding: 3% 3%; */
     text-align: center;
+    color: #fff;
+    font-size: 6vw;
+    font-weight: bold;
     animation: text 2s 1;
-    /* margin-bottom: -10%; */
-}
+    /* margin-bottom: 50%; */
+    letter-spacing: 5px;
+    margin-bottom: -10%;
 
-.container span.text2 {
-    /* padding-top: 10%; */
-    /* padding-bottom: 10%; */
 }
 
 .container span.text2, .container a{
     text-align: center;
     color: rgba(255, 255, 255, 1);
-    font-size: 110%;
-    font-weight: bolder;
+    font-size: 100%;
+    margin-top: 20%;
     position: relative;
-    animation: text2 4s 1;
-    transform: translate(0%, 110%);
+    animation: text2 8s 1;
 }
 
 .container a {
-    color: rgb(230, 125, 221);
-    font-size: 100%;
+    color: rgb(104, 3, 95);
 }
 
 .container a:hover {
@@ -87,25 +72,29 @@ body {
     }
 
     30%{
-        margin-top: 20%;
+
     }
 
+    85%{
+
+    }
 }
 
 @keyframes text {
     0%{
         color: rgba(255, 255, 255, 0);
         letter-spacing: 0;
-        /* margin-bottom: -10%; */
+        margin-bottom: -10%;
     }
 
     30%{
         letter-spacing: 10px;
-        /* margin-bottom: -10%; */
+        margin-bottom: -10%;
     }
 
     85%{
-        /* padding: 3rem 3rem; */
+        letter-spacing: 5px;
+        margin-bottom: -10%;
     }
 }
 
