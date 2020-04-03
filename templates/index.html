@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles-main.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
     <title>Proyecto Azafrán</title>
 </head>
 <body>
     <section>
-        <h1>
+        <!-- <h1>
             Proyecto Azafrán
-        </h1>
+        </h1> -->
+        <nav>
+            <label class="logo">Proyecto Azafran</label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+
+            <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+        </nav>
+
+        <div class="page-content">
+
+        </div>
     </section>
 </body>
 </html>
