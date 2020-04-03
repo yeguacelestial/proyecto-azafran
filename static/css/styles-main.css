@@ -13,6 +13,7 @@ html {
     font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
+
 /* Nav bar */
 nav {
     height: 80px;
@@ -70,6 +71,16 @@ nav #icon {
 }
 
 @media (max-width: 1048px){
+    span.desktop {
+        display: none;
+    }
+
+    span.mobile::after {
+        content: 'Azafrán';
+        visibility: visible;
+        font-size: 5rem;
+    }
+
     label.logo {
         font-size: 2.5rem;
         padding-left: 60px;
