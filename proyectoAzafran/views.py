@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Función principal
+
 def maintainment(request):
     return render(request, 'mnt.html')
-    
+
+# Función principal
 def home(request):
     return render(request, 'base.html')
 
