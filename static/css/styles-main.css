@@ -78,7 +78,8 @@ nav #icon {
     span.mobile::after {
         content: 'Azafrán';
         visibility: visible;
-        font-size: 5rem;
+        font-size: 4rem;
+        padding-left: 1rem;
     }
 
     label.logo {
