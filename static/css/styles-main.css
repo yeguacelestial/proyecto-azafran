@@ -13,6 +13,10 @@ html {
     font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
+body, html, .page-content {
+    height: 70%;
+}
+
 
 /* Nav bar */
 nav {
