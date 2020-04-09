@@ -14,3 +14,6 @@ def index(request):
     
 def azafran(request):
     return HttpResponse("view azafran")
+
+def nosotros(request):
+    return render(request, 'about.html')
