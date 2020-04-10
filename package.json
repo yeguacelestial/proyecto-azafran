@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-azafran",
+  "version": "1.0.0",
+  "description": "Proyecto Azafrán es una plataforma orientada a evidenciar el acoso, hostigamiento y agresión sexual. El fin de esta aplicación web es que los usuarios sean capaces de evidenciar el problema a través de testimonios enviados por ell@s mism@s, así como también información sobre protocolos para dar seguimiento legal a cada caso.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeguacelestial/proyecto-azafran.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeguacelestial/proyecto-azafran/issues"
+  },
+  "homepage": "https://github.com/yeguacelestial/proyecto-azafran#readme",
+
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0"
+  }
+}
