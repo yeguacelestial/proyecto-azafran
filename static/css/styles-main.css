@@ -172,6 +172,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
 @keyframes change {
     0% {
         background-position: 0 50%;
