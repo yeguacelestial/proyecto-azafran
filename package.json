@@ -16,7 +16,6 @@
     "url": "https://github.com/yeguacelestial/proyecto-azafran/issues"
   },
   "homepage": "https://github.com/yeguacelestial/proyecto-azafran#readme",
-
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
