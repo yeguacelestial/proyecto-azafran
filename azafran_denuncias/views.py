@@ -4,11 +4,11 @@ from django.shortcuts import render
 
 # Testing
 def testing(request):
-    return render(request, 'mdbootstrap.html')
+    return render(request, 'testing.html')
 
 # Lista de denuncias actuales
 def denuncias_list(request):
-    return
+    return render(request, 'testimonios.html')
 
 # Formulario para crear denuncias
 def denuncias_form(request):
