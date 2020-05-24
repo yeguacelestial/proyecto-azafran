@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Custom
+from azafran_denuncias.views import mdbootstrap 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', mdbootstrap) # Custom
 ]
