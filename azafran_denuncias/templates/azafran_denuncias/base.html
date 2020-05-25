@@ -44,17 +44,17 @@
 
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="#">Inicio
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="" id="button">Protocolos</a>
+            <a class="nav-link" href="#">Protocolos</a>
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">Denuncias</a>
+            <a class="nav-link" href="{% url 'denuncias' %}">Denuncias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank">Sobre el proyecto</a>
@@ -64,32 +64,28 @@
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              target="_blank">
-              <i class="fab fa-telegram-plane"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{% url 'denunciar' %}" class="nav-link border border-light rounded">
-              <i class="fas fa-flag">
-              </i><span></span>
-              </i><span></span>
-              </i><span></span>
-              </i><span></span>
-              DENUNCIA AHORA
-            </a>
-          </li>
-
+              <a href="{% url 'denunciar' %}" class="nav-link border border-light rounded">
+                <i class="fas fa-flag">
+                </i>
+                DENUNCIA AHORA
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                target="_blank">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
           {% comment %} ADD FLOW EFFECT {% endcomment %}
             <style>
               .nav-item a:hover
@@ -100,61 +96,6 @@
                   transition-delay: 1s;
               }
               
-              .nav-item a span:nth-child(1)
-              {
-                  top: 0;
-                  left: -100%;
-                  width: 100%;
-                  height: 2px;
-                  background: linear-gradient(90deg,transparent,#2196f3);
-              }
-              .nav-item a:hover span:nth-child(1)
-              {
-                  left: 100%;
-                  transition: 1s;
-              } 
-              .nav-item a span:nth-child(2)
-              {
-                  bottom: 0;
-                  right: -100%;
-                  width: 100%;
-                  height: 2px;
-                  background: linear-gradient(270deg,transparent,#2196f3);
-              }
-              .nav-item a:hover span:nth-child(2)
-              {
-                  right: 100%;
-                  transition: 1s;
-                  transition-delay: 0.5s;
-              }
-              .nav-item a span:nth-child(3)
-              {
-                  top: -100℅;
-                  right: 0%;
-                  width: 2px%;
-                  height: 100%;
-                  background: linear-gradient(180deg,transparent,#2196f3);
-              }
-              .nav-item a:hover span:nth-child(3)
-              {
-                  top: 100%;
-                  transition: 1s;
-                  transition-delay: 0.25s;
-              }
-              .nav-item a span:nth-child(4)
-              {
-                  bottom: -100℅;
-                  left: 0%;
-                  width: 2px%;
-                  height: 100%;
-                  background: linear-gradient(360deg,transparent,#2196f3);
-              }
-              .nav-item a:hover span:nth-child(4)
-              {
-                  bottom: 100%;
-                  transition: 1s;
-                  transition-delay: 0.75s;
-              }
             </style>
           
         </ul>

@@ -11,48 +11,14 @@
 <body>
 <div class="sticky-notes">
     <ul>
-    <li>
-        <a href="#">
-        <h2>Title #1</h2>
-        <p>Text Content #1</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-        <h2>Title #2</h2>
-        <p>Text Content #2</p>
-        </a>
-    </li>
+        {% for denuncia in denuncias_list %}
+            <li>
+                <a href="#">
+                <h2>{{denuncia.escuela}}</h2>
+                <p>{{denuncia.denuncia|slice:":35"}}...</p>
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </div>
 </body>

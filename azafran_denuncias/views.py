@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
+
 from .forms import DenunciaForm
+from .models import Denuncia
 
 # Create your views here.
 
@@ -17,7 +19,8 @@ def protocolos(request):
 
 # Página de testimonios
 def denuncias_list(request):
-    return render(request, 'azafran_denuncias/testimonios.html')
+    context = {'denuncias_list': Denuncia.objects.all()}
+    return render(request, 'azafran_denuncias/testimonios.html', context)
 
 # Formulario para crear denuncias
 def denuncias_form(request):
