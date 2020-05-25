@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import DenunciaForm
 
 # Create your views here.
@@ -21,8 +21,14 @@ def denuncias_list(request):
 
 # Formulario para crear denuncias
 def denuncias_form(request):
-    form = DenunciaForm()
-    return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
+    if request.method == 'GET':
+        form = DenunciaForm()
+        return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
+    else:
+        form = DenunciaForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/denuncias')
 
 # Eliminar un denuncia
 def denuncia_delete(request):
