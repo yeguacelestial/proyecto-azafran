@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Testing
 def testing(request):
-    return render(request, 'testing.html')
+    return render(request, 'base.html')
 
 # Lista de denuncias actuales
 def denuncias_list(request):
