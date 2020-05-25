@@ -75,18 +75,17 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"
-                target="_blank">
+              <a class="nav-link" type="button" id="telegram">
                 <i class="fab fa-telegram-plane"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" target="_blank">
+              <a class="nav-link" id="facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" target="_blank">
+              <a class="nav-link" id="twitter">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
@@ -153,6 +152,29 @@
       }
 
       toastr["warning"]("Esta página aún se encuentra en desarrollo.", "Proyecto Azafrán")
+
+    })
+
+    $('#telegram, #facebook, #twitter').on('click', function(){
+      toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+
+      toastr["info"]("Nos encontrarás en redes sociales próximamente.", "Proyecto Azafrán")
 
     })
   </script>
