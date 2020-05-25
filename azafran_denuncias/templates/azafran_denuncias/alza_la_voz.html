@@ -1,10 +1,14 @@
 {% extends 'azafran_denuncias/base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-
-<div class="view" style="background-color: #400082; background-repeat: no-repeat; background-size: cover;">
-<form action="">
-<button type="submit"></button>
-</form>
-</div>
+<style>body{background-color: #400082;}</style>
+    <div class="container" style="margin-top: 10%">
+        <div class="col-md-10 offset-md-1 mt-5">
+            <div class="jumbotron">
+                {% csrf_token %}
+                {{form|crispy}}
+            </div>
+        </div>
+    </div>
 {% endblock content %}
