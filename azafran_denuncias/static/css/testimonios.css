@@ -3,12 +3,12 @@ margin:0;
 padding:0;
 }
 
-.sticky-notes body{
-font-family:arial,sans-serif;
-font-size:100%;
-margin:3em;
-background:#666;
-color:#fff;
+body{
+background-color: #400082;
+}
+
+.sticky-notes {
+    transform: translateY(15%);
 }
 
 .sticky-notes h2 p{
@@ -43,7 +43,7 @@ padding-bottom:10px;
 }
 .sticky-notes ul li p{
 font-family:"Reenie Beanie",arial,sans-serif;
-font-size:100%;
+font-size:180%;
 }
 
 .sticky-notes ul li a{
