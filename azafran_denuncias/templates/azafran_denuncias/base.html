@@ -54,14 +54,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" type="button" id="button">Protocolos</a>
+            <a class="nav-link" id="protocolos">Protocolos</a>
             
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'denuncias' %}">Denuncias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">Sobre el proyecto</a>
+            <a class="nav-link" id="about">Sobre el proyecto</a>
           </li>
         </ul>
 
@@ -133,10 +133,10 @@
   <!-- Toastr -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script>
-    $('#button').on('click', function(){
+    $('#protocolos, #about').on('click', function(){
       toastr.options = {
         "closeButton": false,
-        "debug": false,
+        "debug": true,
         "newestOnTop": false,
         "progressBar": true,
         "positionClass": "toast-bottom-right",
@@ -156,6 +156,7 @@
 
     })
   </script>
+  
     
     <style>
          @media (min-width: 800px) and (max-width: 850px) {
