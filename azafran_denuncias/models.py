@@ -6,13 +6,13 @@ class Escuela(models.Model):
     escuela = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.escuela
 
 class Edad(models.Model):
-    edad = models.CharField(max_length=10)
+    edad = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.title
+        return self.edad
 
 # Formulario de denuncias
 class Denuncia(models.Model):
