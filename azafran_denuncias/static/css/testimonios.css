@@ -8,7 +8,7 @@ body{
 }
 
 .sticky-notes {
-    transform: translateY(15%);
+    transform: translateY(80px);
 }
 
 .sticky-notes h2 p{
