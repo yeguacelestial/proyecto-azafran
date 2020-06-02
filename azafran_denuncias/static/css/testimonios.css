@@ -131,6 +131,6 @@ box-shadow:10px 10px 7px rgba(0,0,0,.7);
 -webkit-transform: scale(1.25);
 -moz-transform: scale(1.25);
 -o-transform: scale(1.25);
-position:relative;
+position:absolute;
 z-index:5;
 }
