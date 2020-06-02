@@ -12,7 +12,7 @@
 <div class="sticky-notes">
     <ul>
         {% for denuncia in denuncias_list %}
-            <li>
+            <li class="transition-swipe">
                 <a>
                 <h2>{{denuncia.escuela}}</h2>
                 <p>{{denuncia.denuncia|slice:":35"}}...</p>

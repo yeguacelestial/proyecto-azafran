@@ -1,0 +1,56 @@
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331!important;
+        opacity: 0.5;
+    }
+}
+
+.carousel,
+.carousel .carousel-inner,
+.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,
+.view,
+body,
+html{height:100%}
+.navbar{background-color:rgba(0,0,0,.5);}
+.page-footer,.top-nav-collapse{background-color:rgba(28,35,49,0.5);}
+@media only screen and (max-width:768px){.navbar{background-color:rgba(28,35,49,0.5);}}
+
+nav li {
+font-size: 1.3rem;
+}
+
+/*BUTTON FLOW EFFECT*/
+.nav-item a:hover
+{
+    color: #d54d7b;
+    background: #d54d7b;
+    box-shadow: 0 0 10px #d54d7b, 0 0 40px #d54d7b, 0 0 80px #d54d7b;
+    transition-delay: 1s;
+}
+/*START SWUP*/
+.transition-fade {
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.transition-swipe {
+    transition: 500ms;
+    transform: translateY(0);
+}
+
+html.is-animating .transition-swipe {
+    transform: translateY(100px);
+}
+/*END SWUP*/

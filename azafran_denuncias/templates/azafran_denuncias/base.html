@@ -23,7 +23,14 @@
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    
+
+    <!--swup.js-->
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+
+    <!--swup scripts and css-->
+    <script defer src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
     {% block base_links %}
     {% endblock base_links %}
 </head>
@@ -96,16 +103,7 @@
               </a>
             </li>
           {% comment %} ADD FLOW EFFECT {% endcomment %}
-            <style>
-              .nav-item a:hover
-              {
-                  color: #d54d7b;
-                  background: #d54d7b;
-                  box-shadow: 0 0 10px #d54d7b, 0 0 40px #d54d7b, 0 0 80px #d54d7b;
-                  transition-delay: 1s;
-              }
-              
-            </style>
+          
           
         </ul>
 
@@ -117,10 +115,10 @@
 <!-- Navbar -->
 
 {% comment %} START BASE CONTENT {% endcomment %}
-
-{% block content %}
-{% endblock content %}
-
+<main id="swup" class="transition-fade">
+  {% block content %}
+  {% endblock content %}
+</main>
 {% comment %} END BASE CONTENT {% endcomment %}
 
     <!-- jQuery -->
@@ -184,27 +182,7 @@
 
     })
   </script>
-  
-    
-    <style>
-         @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-                  opacity: 0.5;
-              }
-          }
 
-        .carousel,.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item,.view,body,html{height:100%}
-        .navbar{background-color:rgba(0,0,0,.5);}
-        .page-footer,.top-nav-collapse{background-color:rgba(28,35,49,0.5);}
-        @media only screen and (max-width:768px){.navbar{background-color:rgba(28,35,49,0.5);}}
-
-        nav li {
-          font-size: 1.3rem;
-        }
-
-    </style>
-    
   <script>
     new WOW().init();
   </script>
