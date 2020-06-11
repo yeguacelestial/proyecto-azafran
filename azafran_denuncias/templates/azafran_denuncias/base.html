@@ -26,7 +26,7 @@
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
-    
+
     <!--swup.js-->
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
@@ -109,10 +109,10 @@
 <!-- Navbar -->
 
 {% comment %} START BASE CONTENT {% endcomment %}
-<main id="swup" class="transition-fade">
-  {% block content %}
-  {% endblock content %}
-</main>
+  <main id="swup" class="transition-fade">
+    {% block content %}
+    {% endblock content %}
+  </main>
 {% comment %} END BASE CONTENT {% endcomment %}
 
   <!-- jQuery -->
@@ -129,58 +129,7 @@
 
   <!-- Toastr -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
-  <script>
-    $('#protocolos, #about').on('click', function(){
-      toastr.options = {
-        "closeButton": false,
-        "debug": true,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-bottom-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-      }
-
-      toastr["warning"]("Esta página aún se encuentra en desarrollo.", "Proyecto Azafrán")
-
-    })
-
-    $('#telegram, #facebook, #twitter').on('click', function(){
-      toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-bottom-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-      }
-
-      toastr["info"]("Nos encontrarás en redes sociales próximamente.", "Proyecto Azafrán")
-
-    })
-  </script>
-
-  <script>
-    new WOW().init();
-  </script>
+  <script src="{% static 'js/toastr.js' %}"></script>
 
 </body>
 </html>
