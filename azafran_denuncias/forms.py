@@ -13,6 +13,7 @@ class DenunciaForm(forms.ModelForm):
             'escuela': '¿Perteneces a alguna de las siguientes instituciones?',
             'denuncia': 'Alza la voz.'
         }
+        widgets = {'denuncia': forms.Textarea(attrs={'rows':5, 'cols':20, 'style':'resize: none'})}
     
     def __init__(self, *args, **kwargs):
         super(DenunciaForm, self).__init__(*args, **kwargs)
