@@ -18,4 +18,4 @@ class DenunciaForm(forms.ModelForm):
         super(DenunciaForm, self).__init__(*args, **kwargs)
         self.fields['edad'].empty_label = "Selecciona una edad"
         self.fields['escuela'].empty_label = "Selecciona una institución"
-        self.fields['genero'].required = False
+        #self.fields['genero'].required = False

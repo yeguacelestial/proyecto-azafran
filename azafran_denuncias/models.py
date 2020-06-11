@@ -14,10 +14,23 @@ class Edad(models.Model):
     def __str__(self):
         return self.edad
 
+# class Genero(models.Model):
+#     genero = models.CharField(max_length=50)
+
+#     def __str__(self):
+#         return self.genero
+
 # Formulario de denuncias
 class Denuncia(models.Model):
-    genero = models.CharField(max_length=20)
-    denuncia = models.CharField(max_length=10000)
+    GENEROS = (
+        ('', 'Selecciona un género'),
+        ('M', 'Masculino'),
+        ('F', 'Femenino'),
+        ('NB', 'No binario'),
+        ('NA', 'Prefiero no decirlo')
+    )
 
     edad = models.ForeignKey(Edad, on_delete=models.CASCADE)
+    genero = models.CharField(max_length=30, choices=GENEROS)
     escuela = models.ForeignKey(Escuela, on_delete=models.CASCADE)
+    denuncia = models.CharField(max_length=10000)
