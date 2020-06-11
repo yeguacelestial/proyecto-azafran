@@ -1,10 +1,12 @@
 {% extends 'azafran_denuncias/base.html' %}
 
-{% block content %}
+{% block base_head %}
+  <title>Inicio - Proyecto Azafrán</title>
+{% endblock base_head %}
 
+{% block content %}
 <!--Carousel Wrapper-->
   <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-
     <!--Indicators-->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
@@ -15,7 +17,6 @@
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
-
       <!--First slide-->
       <div class="carousel-item active">
         <div class="view" style="background-color: #d9455f; background-repeat: no-repeat; background-size: cover;">
@@ -125,9 +126,10 @@ text-shadow: 3px 5px 2px #474747;">Lorem ipsum dolor sit amet consectetur adipis
           <!-- Mask & flexbox options-->
 
         </div>
+        
       </div>
       <!--/Third slide-->
-
     </div>
     <!--/.Slides-->
+
 {% endblock content %}

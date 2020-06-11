@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Azafrán</title>
+
+    {% block base_head %}
+    {% endblock base_head %}
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/1209de7778.js" crossorigin="anonymous"></script>
@@ -23,16 +25,14 @@
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    
     <!--swup.js-->
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
     <!--swup scripts and css-->
     <script defer src="{% static 'js/script.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-    {% block base_links %}
-    {% endblock base_links %}
 </head>
 
 <body>
@@ -102,15 +102,9 @@
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
-          {% comment %} ADD FLOW EFFECT {% endcomment %}
-          
-          
         </ul>
-
       </div>
-
     </div>
-    
   </nav>
 <!-- Navbar -->
 
@@ -121,7 +115,7 @@
 </main>
 {% comment %} END BASE CONTENT {% endcomment %}
 
-    <!-- jQuery -->
+  <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Popper.js -->
@@ -135,6 +129,7 @@
 
   <!-- Toastr -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
   <script>
     $('#protocolos, #about').on('click', function(){
       toastr.options = {

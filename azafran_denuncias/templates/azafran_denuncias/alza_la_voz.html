@@ -1,7 +1,13 @@
 {% extends 'azafran_denuncias/base.html' %}
 {% load crispy_forms_tags %}
 
+{% block base_head %}
+    <title>Alza la Voz - Proyecto Azafran</title>
+{% endblock base_head %}
+
 {% block content %}
+<main id="swup" class="transition-fade">
+
 <style>body{background-color: #400082;}</style>
     <div class="container" style="transform: translateY(15%);">
         <div class="col-md-10 offset-md-1 mt-5">
@@ -28,4 +34,5 @@
             </div>
         </div>
     </div>
+</main>
 {% endblock content %}
