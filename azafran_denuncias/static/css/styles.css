@@ -1,3 +1,6 @@
+/*
+    --- START NAVBAR ---
+*/
 /* Nav-bar logo */
 .eata-logo {
     color: #ffffff; 
@@ -62,7 +65,14 @@ nav li {
     transition-delay: 1s;
 }
 
+/*
+    --- END NAVBAR ---
+*/
 
+
+/*
+    --- START TRANSITIONS BETWEEN PAGES ---
+*/
 /*START SWUP*/
 .transition-fade {
     opacity: 1;
@@ -90,7 +100,66 @@ html.is-animating .transition-swipe {
     transform: translateY(100px);
 }
 /*END SWUP*/
+/*
+    --- END TRANSITIONS BETWEEN PAGES ---
+*/
 
+
+/*
+    --- START PAGE INICIO ---
+*/
+
+/* First Slide */
+.first-slide {
+    background-color: #d9455f;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Second slide */
+.second-slide {
+    background-color: #ff9a76; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+/* Third slide */
+.third-slide {
+    background-color: #679b9b;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Slide title */
+.slide-title{
+    font-family: "Oleo Script";
+    text-align: center;
+    text-shadow: 0 2px 2px #000;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 4px 3px 0 #7A7A7A;
+}
+
+/* Slides subtitle */
+.slide-subtitle {
+    color: #FFFFFF;
+    text-shadow: 3px 5px 2px #474747;
+    font-family: 'Merienda One';
+}
+
+/* Slide content */
+.slide-content {
+    color: #FFFFFF;
+    text-shadow: 3px 5px 2px #474747;
+}
+
+/*
+    --- END PAGE INICIO ---
+*/
+
+/* 
+    --- START PAGE DENUNCIAS ---
+*/
 /* START STICKY NOTES */
 main .sticky-notes *{
     margin:0;
@@ -204,6 +273,7 @@ main .sticky-notes ul li:nth-child(even) a{
     top:5px;
     background:#cfc;
 }
+
 main .sticky-notes ul li:nth-child(3n) a{
     -o-transform:rotate(-3deg);
     -webkit-transform:rotate(-3deg);
@@ -212,7 +282,6 @@ main .sticky-notes ul li:nth-child(3n) a{
     top:-5px;
     background:#ccf;
 }
-
 
 main .sticky-notes ul li a:hover,
 main .sticky-notes ul li a:focus{
@@ -226,3 +295,7 @@ main .sticky-notes ul li a:focus{
     z-index:5;
 }
 /* END STICKY NOTES */
+
+/* 
+    --- END PAGE DENUNCIAS ---
+*/
