@@ -21,7 +21,7 @@ $('#protocolos, #about').on('click', function(){
 
   })
 
-  $('#telegram, #facebook, #twitter').on('click', function(){
+  $('#telegram, #facebook').on('click', function(){
     toastr.options = {
       "closeButton": true,
       "debug": false,

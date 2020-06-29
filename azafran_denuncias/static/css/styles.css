@@ -1,15 +1,16 @@
 /* Nav-bar logo */
-.brand-text {
-    color: #d54d7b; 
+.eata-logo {
+    color: #ffffff; 
     font-family: 'Great Vibes', cursive; 
-    letter-spacing: 8px;font-weight: normal; 
+    letter-spacing: 8px;
+    font-weight: normal; 
     text-align: center; 
     text-shadow: 0 1px 1px #000; 
     font-size: 1.8rem;
 }
 
 .agresor{
-    color: #d54d7b;
+    color: #ffffff;
     text-shadow: 3px 5px 2px #474747; 
     font-family: 'Merienda One';
 }
@@ -32,9 +33,21 @@ html{
     height:100%;
     background-color: #400082;
 }
-.navbar{background-color:rgba(0,0,0,.5);}
-.page-footer,.top-nav-collapse{background-color:rgba(28,35,49,0.5);}
-@media only screen and (max-width:768px){.navbar{background-color:rgba(28,35,49,0.5);}}
+
+.navbar{
+    background-color:rgba(0,0,0,.5);
+}
+
+.page-footer,
+.top-nav-collapse{
+    background-color:rgba(28,35,49,0.5);
+}
+
+@media only screen and (max-width:768px){
+    .navbar{
+        background-color:rgba(28,35,49,0.5);
+    }
+}
 
 nav li {
     font-size: 1.1rem;
