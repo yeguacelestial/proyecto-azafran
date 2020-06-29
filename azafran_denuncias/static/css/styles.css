@@ -299,3 +299,9 @@ main .sticky-notes ul li a:focus{
 /* 
     --- END PAGE DENUNCIAS ---
 */
+
+/* --- START PAGE 'ALZA LA VOZ' --- */
+.form-container {
+    transform: translateY(15%);
+}
+/* --- END PAGE 'ALZA LA VOZ' --- */

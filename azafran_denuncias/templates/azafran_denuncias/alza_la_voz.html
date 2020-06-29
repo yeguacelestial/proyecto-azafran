@@ -2,11 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block base_head %}
-    <title>Alza la Voz - Proyecto Azafran</title>
+    <title>Alza la Voz | Expón a tu Agresor</title>
 {% endblock base_head %}
 
 {% block content %}
-    <div class="container" style="transform: translateY(15%);">
+    <div class="container form-container">
         <div class="col-md-10 offset-md-1 mt-5">
             <div class="jumbotron">
                 <form action="" method="post" autocomplete="off">
@@ -19,11 +19,13 @@
                     <div class="row">
                         <div class="col-md-8">
                             <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fa fa-database"></i> 
-                            Enviar testimonio</button>
+                                Enviar testimonio
+                            </button>
                         </div>
                         <div class="col-md-4">
                             <a href="{% url 'denuncias' %}" class="btn btn-secondary btn-block btn-lg">
-                                <i class="fa fa-list"></i> Ver testimonios
+                                <i class="fa fa-list"></i>
+                                Ver testimonios
                             </a>
                         </div>
                     </div>
