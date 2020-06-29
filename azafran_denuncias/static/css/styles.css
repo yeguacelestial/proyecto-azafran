@@ -1,3 +1,19 @@
+/* Nav-bar logo */
+.brand-text {
+    color: #d54d7b; 
+    font-family: 'Great Vibes', cursive; 
+    letter-spacing: 8px;font-weight: normal; 
+    text-align: center; 
+    text-shadow: 0 1px 1px #000; 
+    font-size: 1.8rem;
+}
+
+.agresor{
+    color: #d54d7b;
+    text-shadow: 3px 5px 2px #474747; 
+    font-family: 'Merienda One';
+}
+
 @media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
         background: #1C2331!important;
