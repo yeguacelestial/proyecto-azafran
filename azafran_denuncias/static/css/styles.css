@@ -43,12 +43,13 @@ html{
 
 .page-footer,
 .top-nav-collapse{
-    background-color:rgba(28,35,49,0.5);
+    background-color:rgba(28,35,49,0.9);
+    
 }
 
 @media only screen and (max-width:768px){
     .navbar{
-        background-color:rgba(28,35,49,0.5);
+        background-color:rgba(28, 35, 49, 0.8);
     }
 }
 

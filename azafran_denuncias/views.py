@@ -7,7 +7,7 @@ from .models import Denuncia
 
 # Testing
 def testing(request):
-    return render(request, 'azafran_denuncias/index.html')
+    return render(request, 'azafran_denuncias/testing.html')
 
 # Página de inicio
 def inicio(request):
