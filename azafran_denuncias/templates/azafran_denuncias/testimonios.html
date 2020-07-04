@@ -8,11 +8,12 @@
 
 <div class="sticky-notes">
     <ul>
-        {% for denuncia in denuncias_list %}
+        {% comment %} {% for denuncia in denuncias_list %} {% endcomment %}
+        {% for denuncia in object_list %}
             <li class="transition-swipe">
-                <a>
+                <a href="{% url 'denuncia_detallada' denuncia.pk %}">
                 <h2>{{denuncia.escuela}}</h2>
-                <p>{{denuncia.denuncia|slice:":35"}}...</p>
+                <p>{{denuncia.denuncia|slice:":30"}}...</p>
                 </a>
             </li>
         {% endfor %}

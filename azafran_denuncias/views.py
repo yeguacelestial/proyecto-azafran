@@ -3,6 +3,13 @@ from django.shortcuts import render, redirect
 from .forms import DenunciaForm
 from .models import Denuncia
 
+# For listing denuncias
+"""
+    ListView: List all denuncias
+    DetailView: List a single denuncia
+"""
+from django.views.generic import ListView, DetailView
+
 # Create your views here.
 
 # Testing
@@ -18,9 +25,9 @@ def protocolos(request):
     return render(request, 'azafran_denuncias/protocolos.html')
 
 # Página de testimonios
-def denuncias_list(request):
-    context = {'denuncias_list': Denuncia.objects.all()}
-    return render(request, 'azafran_denuncias/testimonios.html', context)
+# def denuncias_list(request):
+#     context = {'denuncias_list': Denuncia.objects.all()}
+#     return render(request, 'azafran_denuncias/testimonios.html', context)
 
 # Formulario para crear denuncias
 def denuncias_form(request):
@@ -36,3 +43,13 @@ def denuncias_form(request):
 # Eliminar un denuncia
 def denuncia_delete(request):
     return
+
+# Desplegar todas las denuncias
+class DenunciasView(ListView):
+    model = Denuncia
+    template_name = 'azafran_denuncias/testimonios.html'
+
+# Vista detallada de denuncia
+class DenunciaDetalladaView(DetailView):
+    model = Denuncia
+    template_name = 'azafran_denuncias/denuncia.html'

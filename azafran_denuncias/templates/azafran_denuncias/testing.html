@@ -1,0 +1,22 @@
+{% extends 'azafran_denuncias/base.html' %}
+
+{% block base_head %}
+    <title>Denuncias | Expón a tu Agresor</title>
+{% endblock base_head %}
+
+{% block content %}
+
+<div class="sticky-notes">
+    <ul>
+        {% for denuncia in denuncias_list %}
+            <li class="transition-swipe">
+                <a>
+                <h2>{{denuncia.escuela}}</h2>
+                <p>{{denuncia.denuncia|slice:":35"}}...</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}
