@@ -8,7 +8,6 @@
 
 <div class="sticky-notes">
     <ul>
-        {% comment %} {% for denuncia in denuncias_list %} {% endcomment %}
         {% for denuncia in object_list %}
             <li class="transition-swipe">
                 <a href="{% url 'denuncia_detallada' denuncia.pk %}">

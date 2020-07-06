@@ -1,4 +1,12 @@
-<h1> {{ denuncia.escuela }} </h1>
-<hr>
-<br>
-{{ denuncia.denuncia }}
+{% extends 'azafran_denuncias/base.html' %}
+
+{% block base_head %}
+    <title>"{{denuncia.denuncia|slice:":35"}}..." | Expón a tu agresor</title>
+{% endblock base_head %}
+
+{% block content %}
+    <div class="denuncia-detallada">
+        <h1>{{ denuncia.escuela }}</h1>
+        <p>{{ denuncia.denuncia }}</p>
+    </div>
+{% endblock content %}
