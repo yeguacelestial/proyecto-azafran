@@ -6,7 +6,11 @@
 
 {% block content %}
     <div class="denuncia-detallada">
-        <h1>{{ denuncia.escuela }}</h1>
-        <p>{{ denuncia.denuncia }}</p>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">"{{denuncia.denuncia|slice:":35"}}..."</h1>
+                <p class="lead">{{ denuncia.denuncia }}</p>
+            </div>
+        </div>
     </div>
 {% endblock content %}
