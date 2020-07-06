@@ -5,11 +5,11 @@
 {% endblock base_head %}
 
 {% block content %}
-    <div class="denuncia-detallada">
+    <div class="denuncia-detallada transition-swipe">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">"{{denuncia.denuncia|slice:":35"}}..."</h1>
-                <p class="lead">{{ denuncia.denuncia }}</p>
+                <p class="lead">{{ denuncia.denuncia|linebreaks }}</p>
             </div>
         </div>
     </div>
