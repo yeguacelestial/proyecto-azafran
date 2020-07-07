@@ -63,5 +63,5 @@ $('#denuncias').on('click', function(){
     "hideMethod": "fadeOut"
   }
 
-  toastr["info"]("Haz click en cada post-it para ver el testimonio detallado", "Expón a tu agresor")
+  toastr["info"]("Pulsa sobre el post-it para ver el testimonio detallado", "Expón a tu agresor")
 })
