@@ -38,7 +38,7 @@ def denuncias_form(request):
         form = DenunciaForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/denuncias')
+        return redirect('/testimonios')
 
 # Eliminar un denuncia
 def denuncia_delete(request):
