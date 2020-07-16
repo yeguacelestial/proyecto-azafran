@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 
 from .forms import DenunciaForm
 from .models import Denuncia
+from .models import DenunciaPublicada
 
 # For listing denuncias
 """
@@ -46,10 +47,10 @@ def denuncia_delete(request):
 
 # Desplegar todas las denuncias
 class DenunciasView(ListView):
-    model = Denuncia
+    model = DenunciaPublicada
     template_name = 'azafran_denuncias/testimonios.html'
 
 # Vista detallada de denuncia
 class DenunciaDetalladaView(DetailView):
-    model = Denuncia
+    model = DenunciaPublicada
     template_name = 'azafran_denuncias/denuncia.html'
