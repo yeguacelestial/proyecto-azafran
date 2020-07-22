@@ -319,8 +319,8 @@ main .sticky-notes ul li a:focus{
 /* --- START PAGE 'DENUNCIA' --- */
 .denuncia-detallada {
     transform: translateY(125px);
-    /*color: white;
-    font-family:"Reenie Beanie",arial,sans-serif; */
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .jumbotron {
