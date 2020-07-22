@@ -204,6 +204,14 @@ main .sticky-notes ul li h2{
 main .sticky-notes ul li p{
     font-family:"Reenie Beanie",arial,sans-serif;
     font-size:140%;
+
+    /* Word wrapping */
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    -ms-word-break: break-word;
+    word-break: break-word;
 }
 
 main .sticky-notes ul li a{
@@ -295,6 +303,7 @@ main .sticky-notes ul li a:focus{
     position: relative;
     /* z-index:5; */
 }
+
 /* END STICKY NOTES */
 
 /* 
