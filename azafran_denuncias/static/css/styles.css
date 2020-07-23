@@ -18,6 +18,8 @@ html {
 
     --navbar-item-hover-bg-color: #ffffff23;
     --navbar-item-hover-fg-color: #fff;
+
+    --navbar-height: 97px;
 }
 /*
     --- END VARIABLES ---
@@ -345,7 +347,8 @@ main .sticky-notes ul li a:focus{
 
 /* --- START PAGE 'ALZA LA VOZ' --- */
 .form-container {
-    transform: translateY(15%);
+    padding: 0;
+    padding-top: calc(var(--navbar-height) + 2rem);
 }
 /* --- END PAGE 'ALZA LA VOZ' --- */
 
@@ -359,5 +362,42 @@ main .sticky-notes ul li a:focus{
 .jumbotron {
     background-color: rgba(108, 47, 114, 0.5) !important;
     color: white;
+    max-width: 640px;
+    margin: 0 auto;
 }
+
+#alza-la-voz-form-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#btn-ver-testimonios {
+    width: 40%;
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    #alza-la-voz-form-buttons {
+        flex-direction: column;
+    }
+
+    #btn-ver-testimonios {
+        margin-top: 1rem;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding-top: var(--navbar-height);
+    }
+
+    .jumbotron {
+        background: none !important;
+        box-shadow: none;
+        padding: 2rem;
+    }
+}
+
 /* --- END PAGE 'DENUNCIA' --- */
