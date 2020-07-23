@@ -1,21 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
+
 /*
     --- START NAVBAR ---
 */
 /* Nav-bar logo */
 .eata-logo {
-    color: #ffffff; 
-    font-family: 'Great Vibes', cursive; 
-    letter-spacing: 8px;
-    font-weight: normal; 
+    font-size: 1.6em;
     text-align: center; 
-    text-shadow: 0 1px 1px #000; 
-    font-size: 1.8rem;
 }
 
-.agresor{
-    color: #ffffff;
-    text-shadow: 3px 5px 2px #474747; 
-    font-family: 'Merienda One';
+.eata-logo-top {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+}
+
+.eata-logo-bottom {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.2em;
+    margin-top: -14px;
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
