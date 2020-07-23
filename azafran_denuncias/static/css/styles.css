@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
 
 /*
+    --- VARIABLES ---
+*/
+:root {
+    --eata-logo-top-font: 'Playfair Display', serif;
+    --eata-logo-bt-font: 'Architects Daughter', cursive;
+
+    --main-bg-color: #400082;
+
+    --navbar-bg-color: #00000080;
+    --navbar-sm-bg-color: #1c2331cc;
+
+    --navbar-item-hover-bg-color: #ffffff23;
+    --navbar-item-hover-fg-color: #fff;
+}
+/*
+    --- END VARIABLES ---
+*/
+
+/*
     --- START NAVBAR ---
 */
 /* Nav-bar logo */
@@ -10,12 +29,12 @@
 }
 
 .eata-logo-top {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--eata-logo-top-font);
     font-size: 1em;
 }
 
 .eata-logo-bottom {
-    font-family: 'Architects Daughter', cursive;
+    font-family: var(--eata-logo-bt-font);
     font-size: 1.2em;
     margin-top: -14px;
 }
@@ -28,12 +47,12 @@ main,
 .view,
 body,
 html{
-    height:100%;
-    background-color: #400082;
+    height: 100%;
+    background-color: var(--main-bg-color);
 }
 
 .navbar{
-    background-color:rgba(0,0,0,.5);
+    background-color: var(--navbar-bg-color);
 }
 
 nav li {
@@ -42,8 +61,8 @@ nav li {
 
 .nav-item a:hover
 {
-    color: #fff !important;
-    background: #ffffff23;
+    color: var(--navbar-item-hover-fg-color) !important;
+    background: var(--navbar-item-hover-bg-color);
     transition-delay: 1s;
 }
 
@@ -68,6 +87,10 @@ nav li {
     .navbar-right {
         margin-top: 1rem;
         margin-bottom: 0;
+    }
+
+    .navbar{
+        background-color: var(--navbar-sm-bg-color)
     }
 }
 
