@@ -40,7 +40,6 @@ nav li {
     font-size: 1.1rem;
 }
 
-/*BUTTON FLOW EFFECT*/
 .nav-item a:hover
 {
     color: #fff !important;
@@ -55,6 +54,14 @@ nav li {
 
 .nav-link i {
     margin-right: 0.1rem;
+}
+
+.btn-enviar-testimonio {
+    margin-right: 5px;
+}
+
+.btn-enviar-testimonio i {
+    margin-right: 0.3rem;
 }
 
 /*
