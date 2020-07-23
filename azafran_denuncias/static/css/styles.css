@@ -94,7 +94,8 @@ html{
     }
 
     .navbar{
-        background-color: var(--navbar-sm-bg-color)
+        background-color: var(--navbar-sm-bg-color);
+        padding: 1rem;
     }
 }
 
