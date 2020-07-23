@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
 
+html {
+    font-size: 12px;
+}
+
 /*
     --- VARIABLES ---
 */
@@ -55,8 +59,8 @@ html{
     background-color: var(--navbar-bg-color);
 }
 
-nav li {
-    font-size: 1.1rem;
+.nav-item {
+    font-size: 1.2em;
 }
 
 .nav-item a:hover
