@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
     font-size: 12px;
@@ -8,8 +12,8 @@ html {
     --- VARIABLES ---
 */
 :root {
-    --eata-logo-top-font: 'Playfair Display', serif;
-    --eata-logo-bt-font: 'Architects Daughter', cursive;
+    --eata-logo-top-font: 'Oswald', sans-serif;
+    --eata-logo-bt-font: 'Oswald', sans-serif;
 
     --main-bg-color: #400082;
 
@@ -29,12 +33,13 @@ html {
 /* Nav-bar logo */
 .eata-logo {
     font-size: 1.6em;
-    text-align: center; 
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .eata-logo-top {
     font-family: var(--eata-logo-top-font);
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .eata-logo-bottom {
@@ -65,8 +70,12 @@ html{
 
 .nav-item a:hover
 {
-    color: var(--navbar-item-hover-fg-color) !important;
+    /* color: var(--navbar-item-hover-fg-color) !important;
     background: var(--navbar-item-hover-bg-color);
+    transition-delay: 1s; */
+    color: #d54d7b;
+    background: #d54d7b;
+    box-shadow: 0 0 10px #d54d7b, 0 0 40px #d54d7b, 0 0 80px #d54d7b;
     transition-delay: 1s;
 }
 
@@ -354,6 +363,8 @@ main .sticky-notes ul li a:focus{
     transform: translateY(125px);
     width: 100%;
     word-wrap: break-word;
+
+    font-size: large;
 }
 
 .jumbotron {
