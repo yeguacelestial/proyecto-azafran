@@ -1,10 +1,14 @@
 {% extends 'azafran_denuncias/base.html' %}
 {% load static %}
 {% block base_head %}
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@exponatuagresor"/>
     <meta name="twitter:creator" content="@exponatuagresor"/>
-    <meta name="twitter:image" content="http://pbs.twimg.com/profile_images/1277436859023384576/ALyUUaY4_400x400.jpg"/>
+
+    <meta name="twitter:image:src" content="http://pbs.twimg.com/profile_images/1277436859023384576/ALyUUaY4_400x400.jpg"/>
+    <meta name="twitter:image:width" content="400" />
+    <meta name="twitter:image:height" content="400" />
+
     <meta property="og:title" content="{{denunciapublicada.HASHTAGS|random}} | Expón a tu agresor"//>
     <meta property="og:description" content="{{denunciapublicada.denuncia}}" />
 
