@@ -42,8 +42,8 @@
       <!-- Brand -->
       <a class="navbar-brand" href="/">
         <div class="eata-logo">
-          <strong>Expón a tu</strong><br>
-          <strong class="agresor">AGRESOR</strong>
+          <div class="eata-logo-top">Expón a tu</div>
+          <div class="eata-logo-bottom">AGRESOR</div>
         </div>
       </a>
 
@@ -60,7 +60,8 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'inicio' %}">Inicio
+            <a class="nav-link" href="{% url 'inicio' %}">
+              <i class="fas fa-home"></i> Inicio
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -69,16 +70,18 @@
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'denuncias' %}" id="denuncias">Testimonios</a>
+            <a class="nav-link" href="{% url 'denuncias' %}" id="denuncias">
+              <i class="fas fa-comments"></i> Testimonios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="about">Sobre el proyecto</a>
+            <a class="nav-link" id="about">
+              <i class="fas fa-info-circle"></i> Sobre el proyecto</a>
           </li>
         </ul>
 
         <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item">
+        <ul class="navbar-nav nav-flex-icons navbar-right">
+          <li class="nav-item btn-enviar-testimonio">
               <a href="{% url 'denunciar' %}" class="nav-link border border-light rounded" type="button">
                 <i class="fas fa-flag">
                 </i>
