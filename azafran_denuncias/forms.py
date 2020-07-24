@@ -8,10 +8,10 @@ class DenunciaForm(forms.ModelForm):
         #fields = '__all__'
         fields = ('edad', 'genero', 'escuela', 'denuncia')
         labels = {
-            'edad': '¿Cuál es tu edad?',
+            'edad': '¿Qué edad tenías cuando sucedió?',
             'genero': '¿Cuál es tu genero?',
             'escuela': '¿Perteneces a alguna de las siguientes instituciones?',
-            'denuncia': 'Alza la voz.'
+            'denuncia': 'Mándanos tu testimonio, y #AlzaLaVoz'
         }
         widgets = {'denuncia': forms.Textarea(attrs={'rows':5, 'cols':20, 'style':'resize: none'})}
     

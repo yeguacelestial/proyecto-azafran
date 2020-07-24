@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playfair+Display&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 90%;
 }
 
 /*
@@ -32,7 +33,7 @@ html {
 */
 /* Nav-bar logo */
 .eata-logo {
-    font-size: 1.6em;
+    font-size: 1.9em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -360,7 +361,7 @@ main .sticky-notes ul li a:focus{
 
 /* --- START PAGE 'DENUNCIA' --- */
 .denuncia-detallada {
-    transform: translateY(125px);
+    transform: translateY(70px);
     width: 100%;
     word-wrap: break-word;
 
@@ -370,5 +371,6 @@ main .sticky-notes ul li a:focus{
 .jumbotron {
     background-color: rgba(108, 47, 114, 0.5) !important;
     color: white;
+    transform: translateY(50px);
 }
 /* --- END PAGE 'DENUNCIA' --- */

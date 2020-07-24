@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block base_head %}
-    <title>Denuncias | Expón a tu Agresor</title>
+    <title>Testimonios | Expón a tu Agresor</title>
 {% endblock base_head %}
 
 {% block content %}
@@ -12,7 +12,8 @@
         {% for denuncia in object_list %}
             <li class="transition-swipe">
                 <a href="{% url 'denuncia_detallada' denuncia.pk %}">
-                <h2>{{denuncia.escuela}}</h2>
+                {% comment %} <h2>{{denuncia.escuela}}</h2> {% endcomment %}
+                <h2>{{denuncia.HASHTAGS|random}}</h2>
                 <p>{{denuncia.denuncia|slice:":30"}}...</p>
                 </a>
             </li>
