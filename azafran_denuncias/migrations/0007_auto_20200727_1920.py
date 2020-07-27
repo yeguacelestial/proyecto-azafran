@@ -11,10 +11,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='denunciapublicada',
-            name='genero',
-        ),
+        # migrations.RemoveField(
+        #     model_name='denunciapublicada',
+        #     name='genero',
+        # ),
         migrations.AlterField(
             model_name='denuncia',
             name='edad',
