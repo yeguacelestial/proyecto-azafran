@@ -23,9 +23,12 @@ def inicio(request):
 
 # Formulario para crear denuncias
 def denuncias_form(request):
+    denuncia_model = Denuncia()
+
     if request.method == 'GET':
         form = DenunciaForm()
         return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
+
     else:
         form = DenunciaForm(request.POST)
 
@@ -40,10 +43,18 @@ def denuncias_form(request):
             else:
                 if is_routable:
                     print(f'IP is routable => {ip}')
+
                 else:
                     print(f'Client\'s IP is not routable (IP => {ip})')
 
-        return redirect('/testimonios')
+                    # Storing client's IP on database
+                    denuncia_model.ip_testimonio = ip
+
+            # Save model
+            denuncia_model.save()
+
+            # Redirect to testimonios page
+            return redirect('/testimonios')
 
 
 # Desplegar todas las denuncias
