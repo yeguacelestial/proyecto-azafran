@@ -211,20 +211,23 @@ main .sticky-notes *{
 }
 
 main .sticky-notes {
-    transform: translateY(80px);
+    padding-top: 140px;
 }
 
 main .sticky-notes h2 p{
     font-size:100%;
     font-weight:normal;
 }
+
 main .sticky-notes ul li{
     list-style:none;
 }
+
 main .sticky-notes ul{
     overflow:hidden;
-    padding:3em;
+    padding:1em;
 }
+
 main .sticky-notes ul li a{
     text-decoration:none;
     color:#000;
@@ -234,6 +237,7 @@ main .sticky-notes ul li a{
     width:10em;
     padding:1em;
 }
+
 main .sticky-notes ul li{
     margin:1em;
     float:left;
@@ -244,6 +248,7 @@ main .sticky-notes ul li h2{
     font-weight:bold;
     padding-bottom:10px;
 }
+
 main .sticky-notes ul li p{
     font-family:"Reenie Beanie",arial,sans-serif;
     font-size:140%;
@@ -286,6 +291,7 @@ main .sticky-notes ul li:nth-child(even) a{
     position:relative;
     top:5px;
 }
+
 main .sticky-notes ul li:nth-child(3n) a{
     -o-transform:rotate(-3deg);
     -webkit-transform:rotate(-3deg);
@@ -293,6 +299,7 @@ main .sticky-notes ul li:nth-child(3n) a{
     position:relative;
     top:-5px;
 }
+
 main .sticky-notes ul li:nth-child(5n) a{
     -o-transform:rotate(5deg);
     -webkit-transform:rotate(5deg);
