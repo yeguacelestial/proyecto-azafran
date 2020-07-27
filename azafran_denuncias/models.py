@@ -1,21 +1,8 @@
 from django.db import models
 from django import forms
 import random
+
 # Create your models here.
-
-class Escuela(models.Model):
-    escuela = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.escuela
-
-
-class Edad(models.Model):
-    edad = models.CharField(max_length=20)
-
-    def __str__(self):
-        return self.edad
-
 
 # Modelo de denuncias recibidas
 class Denuncia(models.Model):
@@ -27,25 +14,24 @@ class Denuncia(models.Model):
         ('genero sin especificar', 'Prefiero no decirlo')
     )
 
-    edad = models.ForeignKey(Edad, on_delete=models.CASCADE)
-    genero = models.CharField(max_length=30, choices=GENEROS)
-    escuela = models.ForeignKey(Escuela, on_delete=models.CASCADE)
-    denuncia = models.CharField(max_length=10000)
+    EDADES = (
+        ('', 'Selecciona un rango de edad'),
+        ('De 5 a 10 años', 'De 5 a 10 años'),
+        ('De 11 a 15 años', 'De 11 a 15 años'),
+        ('De 16 a 20 años', 'De 16 a 20 años'),
+        ('De 21 a 25 años', 'De 21 a 25 años'),
+        ('De 26 a 30 años', 'De 26 a 30 años'),
+        ('Más de 30 años', 'Más de 30 años')
+    )
 
+    edad = models.CharField(max_length=30, choices=EDADES)
+    genero = models.CharField(max_length=30, choices=GENEROS)
+    denuncia = models.CharField(max_length=10000)
+    testimonio_fecha = models.DateTimeField(auto_now_add=True)
+    
 
 # Modelo de denuncias publicadas
 class DenunciaPublicada(models.Model):
-    GENEROS = (
-        ('', 'Selecciona un género'),
-        ('M', 'Masculino'),
-        ('F', 'Femenino'),
-        ('NB', 'No binario'),
-        ('NA', 'Prefiero no decirlo')
-    )
-
-    edad = models.ForeignKey(Edad, on_delete=models.CASCADE)
-    genero = models.CharField(max_length=30, choices=GENEROS)
-    escuela = models.ForeignKey(Escuela, on_delete=models.CASCADE)
     denuncia = models.CharField(max_length=10000)
 
     HASHTAGS = (

@@ -21,15 +21,6 @@ def testing(request):
 def inicio(request):
     return render(request, 'azafran_denuncias/index.html')
 
-# Página de protocolos
-def protocolos(request):
-    return render(request, 'azafran_denuncias/protocolos.html')
-
-# Página de testimonios
-# def denuncias_list(request):
-#     context = {'denuncias_list': Denuncia.objects.all()}
-#     return render(request, 'azafran_denuncias/testimonios.html', context)
-
 # Formulario para crear denuncias
 def denuncias_form(request):
     if request.method == 'GET':
@@ -37,13 +28,23 @@ def denuncias_form(request):
         return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
     else:
         form = DenunciaForm(request.POST)
+
         if form.is_valid():
             form.save()
+
+            # Getting client's ip
+            from ipware import get_client_ip
+            ip, is_routable = get_client_ip(request)
+            if ip is None:
+                print('Unable to get client\'s ip ')
+            else:
+                if is_routable:
+                    print(f'IP is routable => {ip}')
+                else:
+                    print(f'Client\'s IP is not routable (IP => {ip})')
+
         return redirect('/testimonios')
 
-# Eliminar un denuncia
-def denuncia_delete(request):
-    return
 
 # Desplegar todas las denuncias
 class DenunciasView(ListView):
