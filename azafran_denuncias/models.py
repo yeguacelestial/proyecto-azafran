@@ -8,10 +8,10 @@ import random
 class Denuncia(models.Model):
     GENEROS = (
         ('', 'Selecciona un género'),
-        ('hombre', 'Masculino'),
-        ('mujer', 'Femenino'),
-        ('no binario', 'No binario'),
-        ('genero sin especificar', 'Prefiero no decirlo')
+        ('Masculino', 'Masculino'),
+        ('Femenino', 'Femenino'),
+        ('No binario', 'No binario'),
+        ('No especificado', 'Prefiero no decirlo')
     )
 
     EDADES = (
@@ -28,7 +28,7 @@ class Denuncia(models.Model):
     genero = models.CharField(max_length=30, choices=GENEROS)
     denuncia = models.CharField(max_length=10000)
     testimonio_fecha = models.DateTimeField(auto_now_add=True)
-    
+
 
 # Modelo de denuncias publicadas
 class DenunciaPublicada(models.Model):
