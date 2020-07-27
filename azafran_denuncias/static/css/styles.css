@@ -366,11 +366,16 @@ main .sticky-notes ul li a:focus{
     word-wrap: break-word;
 
     font-size: large;
+
 }
 
 .jumbotron {
     background-color: rgba(108, 47, 114, 0.5) !important;
     color: white;
     transform: translateY(50px);
+}
+
+#regresar-testimonios-btn{
+    transform: translateY(50%);
 }
 /* --- END PAGE 'DENUNCIA' --- */

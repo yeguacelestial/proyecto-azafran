@@ -17,17 +17,21 @@
 
 {% block content %}
     <div class="denuncia-detallada transition-swipe">
+
         <div class="jumbotron jumbotron-fluid">
             <div class="container" onload="denuncia_notficacion();">
+
                 <h1 class="display-4">"{{denunciapublicada.denuncia|slice:":35"}}..."</h1>
                 <p class="lead">{{ denunciapublicada.denuncia|linebreaks }}</p>
+
+                <a id="regresar-testimonios-btn" href="{% url 'denuncias' %}" class="btn btn-red btn-lg center-block">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    VOLVER
+                </a>
+
             </div>
         </div>
 
-        <a href="{% url 'denuncias' %}" class="btn btn-secondary btn-block btn-lg center-block">
-            <i class="fa fa-list"></i>
-            REGRESAR A TESTIMONIOS
-        </a>
     </div>
 
 {% endblock content %}
