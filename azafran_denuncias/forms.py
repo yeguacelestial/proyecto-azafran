@@ -10,7 +10,7 @@ class DenunciaForm(forms.ModelForm):
         labels = {
             'edad': '¿Qué edad tenías cuando sucedió?',
             'genero': '¿Cuál es tu genero?',
-            'denuncia': 'Mándanos tu testimonio, y #AlzaLaVoz.'
+            'denuncia': 'Ahora, escribe tu testimonio. (NOTA: Tu testimonio será evaluado antes de publicarse en la plataforma.)'
         }
         widgets = {'denuncia': forms.Textarea(attrs={'rows':5, 'cols':20, 'style':'resize: none'})}
     
