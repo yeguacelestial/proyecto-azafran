@@ -29,7 +29,7 @@ class Denuncia(models.Model):
     testimonio_fecha = models.DateTimeField(auto_now_add=True)
 
     # Info from user
-    ip_publica_testimonio = models.GenericIPAddressField()
+    ip_publica_testimonio = models.CharField(max_length=100)
 
 
 # Modelo de denuncias publicadas
