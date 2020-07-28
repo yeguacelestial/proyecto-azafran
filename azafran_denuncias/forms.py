@@ -1,5 +1,6 @@
 from django import forms
 from .models import Denuncia
+from views import get_public_ip
 
 class DenunciaForm(forms.ModelForm):
 

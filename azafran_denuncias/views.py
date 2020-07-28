@@ -4,6 +4,8 @@ from .forms import DenunciaForm
 from .models import Denuncia
 from .models import DenunciaPublicada
 
+from ipware import get_client_ip
+
 # For listing denuncias
 """
     ListView: List all denuncias
@@ -23,39 +25,34 @@ def inicio(request):
 
 # Formulario para crear denuncias
 def denuncias_form(request):
-    denuncia_model = Denuncia()
-
     if request.method == 'GET':
         form = DenunciaForm()
         return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
 
     else:
         form = DenunciaForm(request.POST)
+        form.Meta.model.ip_publica_testimonio = get_public_ip(request)
+        form.save()
 
-        if form.is_valid():
-            # Getting client's ip
-            from ipware import get_client_ip
-            ip, is_routable = get_client_ip(request)
-            if ip is None:
-                print('Unable to get client\'s ip ')
-                denuncia_model.ip_publica_testimonio = 'IP no disponible'
-            else:
-                if is_routable:
-                    print(f'IP is routable => {ip}')
+        # Redirect to testimonios page
+        return redirect('/testimonios')
 
-                else:
-                    print(f'Client\'s IP is not routable (IP => {ip})')
+# Capturar IP Pública del usuario
+def get_public_ip(request):
+    # Getting client's ip
+    ip, is_routable = get_client_ip(request)
 
-                # Storing client's IP on database
-                denuncia_model.ip_publica_testimonio = ip
+    if ip is None:
+        print('Unable to get client\'s ip ')
+        return 'IP no disponible'
 
-                # Save model
-                denuncia_model.save()
-
-            form.save()
-            # Redirect to testimonios page
-            return redirect('/testimonios')
-
+    else:
+        if is_routable:
+            print(f'IP is routable => {ip}')
+        else:
+            print(f'Client\'s IP is not routable (IP => {ip})')
+        return ip
+    
 
 # Desplegar todas las denuncias
 class DenunciasView(ListView):
