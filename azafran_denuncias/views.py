@@ -5,7 +5,6 @@ from .models import Denuncia
 from .models import DenunciaPublicada
 
 from ipware import get_client_ip
-global ip_publica_testimonio
 
 # For listing denuncias
 """
@@ -26,16 +25,23 @@ def inicio(request):
 
 # Formulario para crear denuncias
 def denuncias_form(request):
+    denuncia_model = Denuncia()
+
     if request.method == 'GET':
         form = DenunciaForm()
         return render(request, 'azafran_denuncias/alza_la_voz.html', {'form': form})
 
     else:
         form = DenunciaForm(request.POST)
-        ip_publica_testimonio = get_public_ip(request)
-        form.save()
-        # Redirect to testimonios page
-        return redirect('/testimonios')
+
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.ip_publica_testimonio = get_public_ip(request)
+            form.save()
+            
+            # Redirect to testimonios page
+            return redirect('/testimonios')
+        
 
 # Capturar IP Pública del usuario
 def get_public_ip(request):
