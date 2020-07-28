@@ -49,9 +49,9 @@ def denuncias_form(request):
 
                     # Storing client's IP on database
                     denuncia_model.ip_publica_testimonio = ip
-
-            # Save model
-            denuncia_model.save()
+                    
+                    # Save model
+                    denuncia_model.save()
 
             # Redirect to testimonios page
             return redirect('/testimonios')
