@@ -38,6 +38,7 @@ def denuncias_form(request):
             ip, is_routable = get_client_ip(request)
             if ip is None:
                 print('Unable to get client\'s ip ')
+                denuncia_model.ip_publica_testimonio = 'IP no disponible'
             else:
                 if is_routable:
                     print(f'IP is routable => {ip}')
@@ -45,11 +46,11 @@ def denuncias_form(request):
                 else:
                     print(f'Client\'s IP is not routable (IP => {ip})')
 
-                    # Storing client's IP on database
-                    denuncia_model.ip_publica_testimonio = request.META['HTTP_X_REAL_IP']
+                # Storing client's IP on database
+                denuncia_model.ip_publica_testimonio = ip
 
-                    # Save model
-                    denuncia_model.save()
+                # Save model
+                denuncia_model.save()
 
             form.save()
             # Redirect to testimonios page
