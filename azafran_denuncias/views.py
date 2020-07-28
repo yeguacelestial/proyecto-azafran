@@ -33,8 +33,6 @@ def denuncias_form(request):
         form = DenunciaForm(request.POST)
 
         if form.is_valid():
-            form.save()
-
             # Getting client's ip
             from ipware import get_client_ip
             ip, is_routable = get_client_ip(request)
@@ -48,11 +46,12 @@ def denuncias_form(request):
                     print(f'Client\'s IP is not routable (IP => {ip})')
 
                     # Storing client's IP on database
-                    denuncia_model.ip_publica_testimonio = ip
-                    
+                    denuncia_model.ip_publica_testimonio = request.META['HTTP_X_REAL_IP']
+
                     # Save model
                     denuncia_model.save()
 
+            form.save()
             # Redirect to testimonios page
             return redirect('/testimonios')
 
