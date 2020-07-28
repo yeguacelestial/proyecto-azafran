@@ -5,6 +5,7 @@ from .models import Denuncia
 from .models import DenunciaPublicada
 
 from ipware import get_client_ip
+global ip_publica_testimonio
 
 # For listing denuncias
 """
@@ -31,9 +32,8 @@ def denuncias_form(request):
 
     else:
         form = DenunciaForm(request.POST)
-        form.Meta().model.ip_publica_testimonio = get_public_ip(request)
+        ip_publica_testimonio = get_public_ip(request)
         form.save()
-
         # Redirect to testimonios page
         return redirect('/testimonios')
 

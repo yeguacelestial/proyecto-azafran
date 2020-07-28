@@ -1,11 +1,12 @@
 from django import forms
 from .models import Denuncia
-
+from .views import ip_publica_testimonio as ip_testimonio
 
 class DenunciaForm(forms.ModelForm):
 
     class Meta:
         model = Denuncia
+        model.ip_publica_testimonio = ip_testimonio
         #fields = '__all__'
         fields = ('edad', 'genero', 'denuncia')
         labels = {
