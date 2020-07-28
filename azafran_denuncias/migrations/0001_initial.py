@@ -12,28 +12,28 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Edad',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('edad', models.CharField(max_length=10)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Escuela',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('escuela', models.CharField(max_length=100)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Denuncia',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('genero', models.CharField(max_length=100)),
-                ('denuncia', models.CharField(max_length=10000)),
-                ('edad', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='azafran_denuncias.Edad')),
-                ('escuela', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='azafran_denuncias.Escuela')),
-            ],
-        ),
+        # migrations.CreateModel(
+        #     name='Edad',
+        #     fields=[
+        #         ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('edad', models.CharField(max_length=10)),
+        #     ],
+        # ),
+        # migrations.CreateModel(
+        #     name='Escuela',
+        #     fields=[
+        #         ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('escuela', models.CharField(max_length=100)),
+        #     ],
+        # ),
+        # migrations.CreateModel(
+        #     name='Denuncia',
+        #     fields=[
+        #         ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('genero', models.CharField(max_length=100)),
+        #         ('denuncia', models.CharField(max_length=10000)),
+        #         ('edad', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='azafran_denuncias.Edad')),
+        #         ('escuela', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='azafran_denuncias.Escuela')),
+        #     ],
+        # ),
     ]
