@@ -48,7 +48,7 @@ def denuncias_form(request):
                     print(f'Client\'s IP is not routable (IP => {ip})')
 
                     # Storing client's IP on database
-                    denuncia_model.ip_testimonio = ip
+                    denuncia_model.ip_publica_testimonio = ip
 
             # Save model
             denuncia_model.save()

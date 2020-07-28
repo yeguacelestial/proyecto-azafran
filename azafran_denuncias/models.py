@@ -28,9 +28,9 @@ class Denuncia(models.Model):
     denuncia = models.CharField(max_length=10000)
     testimonio_fecha = models.DateTimeField(auto_now_add=True)
 
-    # Info from browser
-    ip_testimonio = models.CharField(default="127.0.0.1", max_length=100)
-    
+    # Info from user
+    ip_publica_testimonio = models.CharField(default="127.0.0.1", max_length=100)
+
 
 # Modelo de denuncias publicadas
 class DenunciaPublicada(models.Model):
