@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='denuncia',
             name='ip_publica_testimonio',
-            field=models.GenericIPAddressField(),
+            field=models.CharField(max_length=50),
         ),
     ]
