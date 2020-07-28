@@ -31,7 +31,7 @@ def denuncias_form(request):
 
     else:
         form = DenunciaForm(request.POST)
-        form.Meta.model.ip_publica_testimonio = get_public_ip(request)
+        form.Meta().model.ip_publica_testimonio = get_public_ip(request)
         form.save()
 
         # Redirect to testimonios page
